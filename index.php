@@ -79,10 +79,10 @@
 
   <!-- nav bar -->
   <nav class="navbar" style="background: rgba(0, 0, 0, 0.7); padding: 10px 20px; display: flex; justify-content: center; gap: 20px; position: sticky; top: 0; z-index: 100;">
-    <a href="index.html" style="color: white; text-decoration: none; font-weight: bold;">Home</a>
-    <a href="html/services.html" style="color: white; text-decoration: none; font-weight: bold;">Services</a>
-    <a href="html/places/destinations.html" style="color: white; text-decoration: none; font-weight: bold;">Destinations</a>
-    <a href="html/contactus.html" style="color: white; text-decoration: none; font-weight: bold;">Contact Us</a>
+    <a href="index.php" style="color: white; text-decoration: none; font-weight: bold;">Home</a>
+    <a href="pages/services.php" style="color: white; text-decoration: none; font-weight: bold;">Services</a>
+    <a href="pages/places/destinations.php" style="color: white; text-decoration: none; font-weight: bold;">Destinations</a>
+    <a href="pages/contactus.php" style="color: white; text-decoration: none; font-weight: bold;">Contact Us</a>
   </nav>
 
   <section id="about">
