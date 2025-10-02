@@ -42,11 +42,7 @@
     .contact-form { max-width:500px; margin:auto; }
     input, textarea { width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc; }
     button { padding:10px 20px; background:#007bff; color:white; border:none; border-radius:5px; cursor:pointer; }
-    footer { background:rgba(0,0,0,0.5); 
-            color:white; 
-            padding:10px; 
-            text-align:center; 
-            border-radius:10px;}
+
     .social-icons a {
       color:white;
       margin:0 10px;
