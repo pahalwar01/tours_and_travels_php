@@ -42,4 +42,8 @@ hr{
     .navbar a {
         font-size: 12px;
     }
+    .topbarcontact{
+        font-size: 11px;
+        margin-left: 0px;
+    }
 }
