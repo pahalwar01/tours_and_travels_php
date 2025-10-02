@@ -12,7 +12,7 @@
   <title>Homepage</title>
    <style>
     body { font-family: Arial, sans-serif; margin:0; padding:0; 
-        background:url('https://cdn.pixabay.com/photo/2024/01/18/10/07/sunset-8516639_1280.jpg') center/cover fixed no-repeat;
+        background:url('https://images.unsplash.com/photo-1501436513145-30f24e19fcc8?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover fixed no-repeat;
         color:#333;}
     /* Top Contact Bar */
     .topbar {
@@ -148,6 +148,11 @@
             </div>
           </div>
         </a>
+      </div>
+      <br><hr>
+
+      <div>
+        
       </div>
       <br><hr>
     <!-- Why Choose Us Section -->
