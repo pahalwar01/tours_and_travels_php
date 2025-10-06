@@ -24,7 +24,7 @@
       align-items:center;
       font-size:13px;
     }
-    .topbar a { color:white; text-decoration:none; margin-left:0px; }
+    .topbar a { color:white; text-decoration:none; margin-left:0px; } 
     
     /* Hero Header */
     header::before {
