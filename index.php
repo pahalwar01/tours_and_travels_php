@@ -10,76 +10,17 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <title>Homepage</title>
-   <style>
+  <style>
     body { font-family: Arial, sans-serif; margin:0; padding:0; 
         background:url('https://images.unsplash.com/photo-1501436513145-30f24e19fcc8?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover fixed no-repeat;
         color:#333;}
-    /* Top Contact Bar */
-    .topbar {
-      background:#007bff;
-      color:white;
-      padding:8px 20px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      font-size:13px;
-    }
-    .topbar a { color:white; text-decoration:none; margin-left:0px; } 
-    
-    /* Hero Header */
-    header::before {
-      content:"";
-      position:absolute;
-      top:0; left:0; right:0; bottom:0;
-      background:rgba(0,0,0,0.1); /* dark overlay */
-    }
-    header .hero-text {
-      position:relative;
-      z-index:1;
-    }
-    header h1 { font-size:3rem; color: aqua; margin:0; margin-bottom: -10px; }
-    header p { font-size:1.2rem; color: white; }
-    
-    /* Sections */
-    section { padding:40px; text-align:center; color: black; }
-    .contact-form { max-width:500px; margin:auto; }
-    input, textarea { width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc; }
-    button { padding:10px 20px; background:#007bff; color:white; border:none; border-radius:5px; cursor:pointer; }
-
-    .social-icons a {
-      color:white;
-      margin:0 10px;
-      font-size:20px;
-      text-decoration:none;
-    }
-
-    .hover:hover {
-      transform: scale(1.25);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    /* WhatsApp Floating Button */
-    .whatsapp-float {
-      position:fixed;
-      bottom:20px;
-      right:20px;
-      height: 26px;
-      background:#25D366;
-      color:white;
-      border-radius:50%;
-      padding:15px;
-      font-size:25px;
-      box-shadow:0 4px 10px rgba(0,0,0,0.3);
-      text-decoration:none;
-      z-index:1000;
-    }
   </style>
 </head>
 <body>
 
   <?php include 'header.php'; ?>
 
-  <!-- nav bar -->
+  <!-- nav bar --> 
   <nav class="navbar" style="background: rgba(0, 0, 0, 0.7); padding: 10px 20px; display: flex; justify-content: center; gap: 20px; position: sticky; top: 0; z-index: 100;">
     <a href="index.php" style="color: white; text-decoration: none; font-weight: bold;">Home</a>
     <a href="pages/services.php" style="color: white; text-decoration: none; font-weight: bold;">Services</a>
