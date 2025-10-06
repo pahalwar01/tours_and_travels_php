@@ -43,55 +43,10 @@
     </div><br><hr>
 
     <!-- Popular Destinations Section -->
-    <h2 class="paragraph-header" style="font-size: 22px;"><u>Popular Destinations</u></h2>
-      <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
-        <a href="pages/places/manali.php" style="text-decoration: none; color: inherit;">
-          <div class="hover" style="width: 180px; background: rgba(255,255,255,0.95); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; transition: transform 0.2s; cursor: pointer;">
-            <img src="https://cdn.pixabay.com/photo/2021/02/19/14/38/mountain-6030438_1280.jpg" alt="Manali" style="width:100%; height:120px; object-fit:cover;">
-            <div style="padding: 12px; text-align: center;">
-              <strong><b>Manali</b></strong>
-            </div>
-          </div>
-        </a>
-        <a href="pages/places/goa.php" style="text-decoration: none; color: inherit;">
-          <div class="hover" style="width: 180px; background: rgba(255,255,255,0.95); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; transition: transform 0.2s; cursor: pointer;">
-            <img src="https://cdn.pixabay.com/photo/2017/05/30/05/46/goa-2355885_1280.jpg" alt="Goa" style="width:100%; height:120px; object-fit:cover;">
-            <div style="padding: 12px; text-align: center;">
-              <strong><b>Goa</b></strong>
-            </div>
-          </div>
-        </a>
-        <a href="pages/places/jaipur.php" style="text-decoration: none; color: inherit;">
-          <div class="hover" style="width: 180px; background: rgba(255,255,255,0.95); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; transition: transform 0.2s; cursor: pointer;">
-            <img src="https://cdn.pixabay.com/photo/2021/04/06/11/22/hawa-mahal-6156123_1280.jpg" alt="Jaipur" style="width:100%; height:120px; object-fit:cover;">
-            <div style="padding: 12px; text-align: center;">
-              <strong><b>Jaipur</b></strong>
-            </div>
-          </div>
-        </a>
-        <a href="pages/places/rishikesh.php" style="text-decoration: none; color: inherit;">
-          <div class="hover" style="width: 180px; background: rgba(255,255,255,0.95); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; transition: transform 0.2s; cursor: pointer;">
-            <img src="https://cdn.pixabay.com/photo/2022/10/05/07/11/temple-7499927_1280.jpg" alt="Rishikesh" style="width:100%; height:120px; object-fit:cover;">
-            <div style="padding: 12px; text-align: center;">
-              <strong><b>Rishikesh</b></strong>
-            </div>
-          </div>
-        </a>
-        <a href="pages/places/agra.php" style="text-decoration: none; color: inherit;">
-          <div class="hover" style="width: 180px; background: rgba(255,255,255,0.95); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); overflow: hidden; transition: transform 0.2s; cursor: pointer;">
-            <img src="https://cdn.pixabay.com/photo/2023/03/26/20/48/tajmahal-7879103_640.jpg" alt="Agra" style="width:100%; height:120px; object-fit:cover;">
-            <div style="padding: 12px; text-align: center;">
-              <strong><b>Agra</b></strong>
-            </div>
-          </div>
-        </a>
-      </div>
-      <br><hr>
-
-      <div>
-        
-      </div>
-      <br><hr>
+    <div>
+      <?php include 'pages/popularplaces.php'; ?>
+    </div>
+    <br><hr>
     <!-- Why Choose Us Section -->
   <div>
     <h2 class="paragraph-header" style="font-size: 22px;"><u>Why Choose Us</u></h2>
@@ -133,7 +88,6 @@
   </section>
 
 <!-- footer section-->
-
 
   <?php include 'footer.php'; ?>
 
