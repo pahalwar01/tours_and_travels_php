@@ -15,9 +15,9 @@
   <!--header name and contact details-->
     <div class="topbar">
         <div><strong><?php include 'brand_name.php'; ?></strong></div>
-            <div class="topbarcontact">
+            <a>
                 📞 +91 9876543210 | ✉ travelagency@email.com
-            </div>
+            </a>
     </div>
   <!--header name and contact details end-->
 
