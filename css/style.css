@@ -48,8 +48,4 @@ footer { background:rgba(0,0,0,0.5);
     .navbar a {
         font-size: 12px;
     }
-    .topbarcontact{
-        font-size: 11px;
-        margin-left: 0px;
-    }
 }
