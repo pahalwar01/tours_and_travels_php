@@ -72,7 +72,7 @@
   <!--header name and contact details-->
     <?php include '../header.php'; ?>
 
-  <!-- nav bar -->
+  <!-- nav bar --> 
   <nav class="navbar" style="background: rgba(0, 0, 0, 0.7); padding: 10px 20px; display: flex; justify-content: center; gap: 20px; position: sticky; top: 0; z-index: 100;">
     <a href="../index.php" style="color: white; text-decoration: none; font-weight: bold;">Home</a>
     <a href="services.php" style="color: white; text-decoration: none; font-weight: bold;">Services</a>
