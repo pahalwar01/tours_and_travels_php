@@ -94,7 +94,7 @@ button { padding:10px 20px; background:#007bff; color:white; border:none; border
     margin-top: -10px;
 }
 
-/* Brand Name and Slogan Styles */
+/* Brand Name and Slogan Styles
 @media screen and (max-width: 600px) {
     .brand-name{
         font-size: 18px;
@@ -125,3 +125,4 @@ button { padding:10px 20px; background:#007bff; color:white; border:none; border
     .topbar a { color:white; text-decoration:none; margin-right:0px; } 
 
 }
+     */
