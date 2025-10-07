@@ -1,3 +1,6 @@
+<?php
+// index.php
+?>
 <div class poplularplaces>
     <h2 class="paragraph-header" style="font-size: 22px;"><u>Popular Places to Visit in India</u></h2>
     <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
