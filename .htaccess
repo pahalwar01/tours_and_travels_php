@@ -1,0 +1,11 @@
+# Sensitive Files Hide
+<FilesMatch "^(config\.php|brand_name\.php|\.env|\.git)">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Directory Browsing Off
+Options -Indexes
+
+# UTF-8 Encoding
+AddDefaultCharset UTF-8
