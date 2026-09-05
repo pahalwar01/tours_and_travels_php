@@ -1,201 +1,61 @@
+<?php
+// pages/places/manali.php
+require_once __DIR__ . '/../../config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="icon" type="image/x-icon" href="../../img/favicon.ico">
-  <title>Manali</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; 
-        background:url('https://images.unsplash.com/photo-1501436513145-30f24e19fcc8?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover fixed no-repeat;
-        color:#333;}
-        /* Top Contact Bar */
-      .topbar {
-          background:#007bff;
-          color:white;
-          padding:8px 20px;
-          display:flex;
-          justify-content:space-between;
-          align-items: center;
-          font-size:13px;
-      }
-      .topbar a { color:white; text-decoration:none; margin-left:0px; } 
-
-      /* Hero Header */
-      header::before {
-          content:"";
-          position:absolute;
-          top:0; left:0; right:0; bottom:0;
-          background:rgba(0,0,0,0.1); /* dark overlay */
-      }
-      header .hero-text {
-          position:relative;
-          z-index:1;
-      }
-      header h1 { font-size:3rem; color: aqua; margin:0; margin-bottom: -10px; }
-      header p { font-size:1.2rem; color: white; }
-
-
-      footer { background:rgba(0,0,0,0.5); 
-              color:white; 
-              padding:10px;
-              text-align:center; 
-              border-radius:10px;}
-
-      /* Sections */
-      section { padding:40px; text-align:center; color: black; }
-      .contact-form { max-width:500px; margin:auto; }
-      input, textarea { width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc; }
-      button { padding:10px 20px; background:#007bff; color:white; border:none; border-radius:5px; cursor:pointer; }
-
-      .social-icons a {
-          color:white;
-          margin:0 10px;
-          font-size:20px;
-          text-decoration:none;
-      }
-
-      .hover:hover {
-          transform: scale(1.25);
-          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      }
-
-      /* WhatsApp Floating Button */
-      .whatsapp-float {
-          position:fixed;
-          bottom:20px;
-          right:20px;
-          height: 26px;
-          background:#25D366;
-          color:white;
-          border-radius:50%;
-          padding:15px;
-          font-size:25px;
-          box-shadow:0 4px 10px rgba(0,0,0,0.3);
-          text-decoration:none;
-          z-index:1000;
-      }
-
-      .paragraph-header{
-          font-weight: bold;
-          margin-top: 20px;
-          font-size: 22px;
-          margin-bottom: 15px;
-      }
-
-      .places-to-visit p{
-          margin-bottom: 15px;
-          margin-top: 5px;
-          font-size: 15px;
-      }
-
-      .services-text h3{
-          color: rgb(0, 255, 233);
-      }
-
-      .services-text p{
-          color: white;
-          font-size: 14px;
-          margin-top: -10px;
-      }
-      @media screen and (max-width: 600px) {
-          .brand-name{
-              font-size: 18px;
-          }
-          .brand-slogan{
-              font-size: 12px;
-          }
-          .brand-slogan-lastline{
-              font-size: 14px;
-          }
-          .navbar a {
-              font-size: 12px;
-          }
-
-          header h1 { font-size:1.3rem; color: aqua; margin:0; margin-bottom: -10px; }
-          header p { font-size:1rem; color: white; }
-
-          .topbar {
-          background:#007bff;
-          color:white;
-          padding:8px 10px;
-          display:flex;
-          justify-content:space-between;
-          align-items: center;
-          font-size:0.7rem;
-          }
-
-          .topbar a { color:white; text-decoration:none; margin-right:0px; font-size: 0.7rem; } 
-
-      }
-  </style>
+  <title>Manali Tour - <?php echo htmlspecialchars(AGENCY_NAME, ENT_QUOTES, 'UTF-8'); ?></title>
 </head>
 <body>
 
-  <!--header name and contact details-->
+  <!-- Header & Navbar -->
+  <?php include ROOT_PATH . '/header.php'; ?>
+  <?php include ROOT_PATH . '/navbar.php'; ?>
 
-<?php include '../../header.php'; ?>
+  <main class="container">
+    <div class="place-content">
+      <h2 style="font-size: 2.2rem; color: var(--dark); margin-bottom: 12px;">Manali - Gem of Himachal</h2>
+      <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 25px;">
+        Nestled in the Beas River valley, Manali offers pine forests, alpine rivers, and high mountain passes, making it an ideal choice for leisure holidays and winter snow sports.
+      </p>
 
-<!-- nav bar -->
-  <nav class="navbar" style="background: rgba(0, 0, 0, 0.7); padding: 10px 20px; display: flex; justify-content: center; gap: 20px; position: sticky; top: 0; z-index: 100;">
-    <a href="../../index.php" style="color: white; text-decoration: none; font-weight: bold;">Home</a>
-    <a href="../services.php" style="color: white; text-decoration: none; font-weight: bold;">Services</a>
-    <a href="destinations.php" style="color: white; text-decoration: none; font-weight: bold;">Destinations</a>
-    <a href="../contactus.php" style="color: white; text-decoration: none; font-weight: bold;">Contact Us</a>
-  </nav>
+      <!-- Smooth Touch Swipable Gallery -->
+      <div class="gallery-row">
+        <img src="https://cdn.pixabay.com/photo/2021/10/19/11/52/nature-6723371_640.jpg" alt="Manali Valley" loading="lazy">
+        <img src="https://cdn.pixabay.com/photo/2020/02/04/19/02/manali-4819132_640.jpg" alt="Snow Peaks" loading="lazy">
+        <img src="https://cdn.pixabay.com/photo/2016/12/30/23/06/beas-river-1941786_640.jpg" alt="Beas River" loading="lazy">
+        <img src="https://cdn.pixabay.com/photo/2016/01/16/16/08/mountaineerz-1143552_640.jpg" alt="Trek" loading="lazy">
+      </div>
 
+      <h2 style="font-size: 1.6rem; color: var(--dark); margin: 30px 0 20px 0;">Famous Sights in Manali</h2>
 
-  <section id="about">
-
-    <div>
-        <h2 style="margin-top: -30px; font-size: 30px;">Manali - The Gem of Himachal Pradesh</h2>
-        <hr style="margin-top: -16px;">
-        <p style="text-align: justify; margin: 20px; font-size: 18px;">
-            Nestled in the heart of the himalayan mountains, Manali is a picturesque town in Himachal Pradesh, India. Known for its breathtaking landscapes, snow-capped peaks, and vibrant culture, Manali is a haven for nature lovers and adventure enthusiasts alike. Whether you're seeking tranquility amidst nature or thrilling outdoor activities, Manali has something to offer for everyone.
-        </p><br>
-        <hr style="margin-top: -16px;">
-                <div>
-                    <marquee behavior="scroll" direction="left" scrollamount="15">
-                        <img src="https://cdn.pixabay.com/photo/2021/10/19/11/52/nature-6723371_640.jpg" alt="manali-1" style="height: 200px; width: 250px; margin: 10px; border-width: 3px; border-color: aqua; border-style: groove;">
-                        <img src="https://cdn.pixabay.com/photo/2020/02/04/19/02/manali-4819132_640.jpg" alt="manali-2"  style="height: 200px; width: 250px; margin: 10px; border-width: 3px; border-color: aqua; border-style: groove;">
-                        <img src="https://cdn.pixabay.com/photo/2016/12/30/23/16/manali-1941810_640.jpg" alt="manali-3"  style="height: 200px; width: 250px; margin: 10px; border-width: 3px; border-color: aqua; border-style: groove;">
-                        <img src="https://cdn.pixabay.com/photo/2016/12/30/23/09/manali-1941793_1280.jpg" alt="manali-4"  style="height: 200px; width: 250px; margin: 10px; border-width: 3px; border-color: aqua; border-style: groove;">
-                        <img src="https://cdn.pixabay.com/photo/2016/12/30/23/06/beas-river-1941786_640.jpg" alt="manali-5"  style="height: 200px; width: 250px; margin: 10px; border-width: 3px; border-color: aqua; border-style: groove;">
-                        <img src="https://cdn.pixabay.com/photo/2016/01/16/16/08/mountaineerz-1143552_640.jpg" alt="manali-6"  style="height: 200px; width: 250px; margin: 10px; border-width: 3px; border-color: aqua; border-style: groove;">
-                    </marquee>
-                </div><br><br>
-                <hr style="margin-top: -16px;">
-                <h2 class="paragraph-header" style="font-size: 22px;"><u>Famous sights to visit at Manali</u></h2>
-                <br>
-                <div>
-                    <ul class="places-to-visit" contextmenu="sopts" style="list-style-type: square; text-align: left; display: inline-block; margin-top: -10px;">
-                        <li><b><u>Rohtang Pass</u></b></li>
-                        <p>A high-altitude pass, it's a gateway to snow-covered mountains, adventure activities, and ancient trade routes.</p>
-                        <li><b><u>Solang Valley</u></b></li>
-                        <p>Famous for adventure sports like paragliding, zorbing, and skiing in winter, this is a must-visit for thrill-seekers.</p>
-                        <li><b><u>Hadimba Devi Temple</u></b></li>
-                        <p>The Hidimba Devi Temple is famous for its unique four-tiered wooden pagoda architecture, its deep connection to the Hindu epic Mahabharata through the legend of Hidimba Devi, the demoness who married Bhima, and its tranquil setting within a cedar forest in Manali.</p>
-                        <li><b><u>Old Manali</u></b></li>
-                        <p>In a single day, you can easily explore the key attractions of Old Manali by starting at the Hadimba Devi Temple and then heading to the Manu Temple dedicated to the sage</p>
-                        <li><b><u>Vashisht</u></b></li>
-                        <p>Vashisht village near Manali is famous for its sulfurous hot water springs, which are believed to have healing properties and are located near the ancient Vashisht Temple. </p>
-                        <li><b><u>Jogini Waterfall</u></b></li>
-                        <p>Jogini Waterfall is famous for its beautiful cascade and the religious significance associated with the ancient temple of Goddess Jogini, located near the Vashisht Temple in Manali.</p>
-                        <li><b><u>Manu Temple</u></b></li>
-                        <p>The Manu Temple in Manali is famous for its dedication to the sage Manu, who is considered the creator of mankind in Hindu mythology, and for its serene location amidst apple orchards and scenic views.</p>
-                        <li><b><u>Beas River</u></b></li>
-                        <p>The Beas River is famous for its stunning natural beauty, adventure activities like river rafting, and its significance in Hindu mythology as it is named after the sage Vyas, who is believed to have composed the Mahabharata on its banks.</p>
-                    </ul>
-                </div>
-
+      <div class="sight-item">
+        <h3>Solang Valley & Rohtang Pass</h3>
+        <p>The epicenter of adventure activities including paragliding, skiing, zorbing, and mountain landscapes.</p>
+      </div>
+      <div class="sight-item">
+        <h3>Hadimba Devi Temple</h3>
+        <p>An ancient 16th-century wooden pagoda temple built inside the Dhungiri cedar forest.</p>
+      </div>
+      <div class="sight-item">
+        <h3>Old Manali & Manu Temple</h3>
+        <p>Charming village lanes, riverside cafes, and the traditional shrine dedicated to Sage Manu.</p>
+      </div>
+      <div class="sight-item">
+        <h3>Jogini Waterfalls</h3>
+        <p>A scenic short hiking trail starting from Vashisht village through orchards leading to cascading waterfalls.</p>
+      </div>
     </div>
+  </main>
 
-  </section>
+  <!-- Footer -->
+  <?php include ROOT_PATH . '/footer.php'; ?>
 
-<!-- footer start-->
-  <?php include '../../footer.php'; ?>
-<!-- footer end-->
 </body>
 </html>
