@@ -88,32 +88,10 @@ require_once __DIR__ . '/config.php';
   </section>
 
   <!-- 6. Contact Us Form -->
-  <section class="container" id="contact" style="padding-top: 10px;">
-    <div class="section-header">
-      <h2>Get In Touch</h2>
-      <p>Send your query and our team will get back to you with custom quotes</p>
-    </div>
 
-    <div class="contact-wrapper">
-      <form action="https://formsubmit.co/pahalwar@gmail.com" method="POST" autocomplete="on">
-        <!-- Anti-Spam Honeypot -->
-        <input type="text" name="_honey" class="antispam-trap" tabindex="-1" autocomplete="off">
-        <input type="hidden" name="_captcha" value="true">
-        <input type="hidden" name="_template" value="table">
-
-        <div class="form-group">
-          <input type="text" name="name" class="form-control" placeholder="Your Name" maxlength="60" pattern="[a-zA-Z\s]+" title="Only letters and spaces allowed" required>
-        </div>
-        <div class="form-group">
-          <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number" maxlength="15" pattern="[0-9+-\s]{8,15}" title="Enter a valid phone number" required>
-        </div>
-        <div class="form-group">
-          <textarea name="message" class="form-control" rows="4" placeholder="Tell us your destination, dates, and travelers..." maxlength="1000" required></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Send Message</button>
-      </form>
-    </div>
-  </section>
+    <main class="container">
+      <?php include ROOT_PATH . '../corporate_desk.php'; ?>
+    </main>
 
   <!-- 7. Footer -->
   <?php include ROOT_PATH . '/footer.php'; ?>
