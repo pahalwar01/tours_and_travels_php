@@ -1,33 +1,24 @@
 <?php
-// index.php
+// footer.php
+if (!defined('SECURE_ACCESS')) {
+    header("HTTP/1.1 403 Forbidden");
+    exit("Direct access forbidden.");
+}
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-</head>
-<body>
-  <footer>
-    <p>&copy; 2025 <?php include 'brand_name.php'; ?>. All rights reserved.</p>
-    <p>📍 Delhi, India | 📞 +91 9876543210 | ✉ travelagency@email.com</p>
-    <!--socail media icons-->
-    <!--<div class="social-icons">
-      <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
-      <a href="https://twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
-    </div>-->
+<footer class="site-footer">
+  <p>&copy; <?php echo date('Y'); ?> <strong><?php echo htmlspecialchars(AGENCY_NAME, ENT_QUOTES, 'UTF-8'); ?></strong>. All rights reserved.</p>
+  <p style="margin-top: 8px; font-size: 13px;">
+    📍 Delhi NCR, India &nbsp;|&nbsp; 
+    📞 <a href="tel:<?php echo AGENCY_PHONE; ?>"><?php echo AGENCY_PHONE; ?></a> &nbsp;|&nbsp; 
+    ✉ <a href="mailto:<?php echo AGENCY_EMAIL; ?>"><?php echo AGENCY_EMAIL; ?></a>
+  </p>
 
-     <!-- WhatsApp Floating Button -->
-     <div class="whatsapp-button">
-      <a href="https://wa.me/917503629170" class="whatsapp-float" target="_blank">
-        <i class="fa fa-whatsapp" aria-hidden="true"></i>
-      </a>
-    </div>
-  </footer>
-   
-</body>
-</html>
+  <!-- WhatsApp Floating Action -->
+  <a href="https://wa.me/<?php echo WHATSAPP_NUMBER; ?>" 
+     class="whatsapp-float-btn" 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+</footer>
