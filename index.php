@@ -1,215 +1,122 @@
 <?php
 // index.php
+require_once __DIR__ . '/config.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="#">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-  <title>Homepage</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; 
-        background:url('https://images.unsplash.com/photo-1501436513145-30f24e19fcc8?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover fixed no-repeat;
-        color:#333;}
-        /* Top Contact Bar */
-      .topbar {
-          background:#007bff;
-          color:white;
-          padding:8px 20px;
-          display:flex;
-          justify-content:space-between;
-          align-items: center;
-          font-size:13px;
-      }
-      .topbar a { color:white; text-decoration:none; margin-left:0px; } 
-
-      /* Hero Header */
-      header::before {
-          content:"";
-          position:absolute;
-          top:0; left:0; right:0; bottom:0;
-          background:rgba(0,0,0,0.1); /* dark overlay */
-      }
-      header .hero-text {
-          position:relative;
-          z-index:1;
-      }
-      header h1 { font-size:3rem; color: aqua; margin:0; margin-bottom: -10px; }
-      header p { font-size:1.2rem; color: white; }
-
-
-      footer { background:rgba(0,0,0,0.5); 
-              color:white; 
-              padding:10px;
-              text-align:center; 
-              border-radius:10px;}
-
-      /* Sections */
-      section { padding:40px; text-align:center; color: black; }
-      .contact-form { max-width:500px; margin:auto; }
-      input, textarea { width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc; }
-      button { padding:10px 20px; background:#007bff; color:white; border:none; border-radius:5px; cursor:pointer; }
-
-      .social-icons a {
-          color:white;
-          margin:0 10px;
-          font-size:20px;
-          text-decoration:none;
-      }
-
-      .hover:hover {
-          transform: scale(1.25);
-          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      }
-
-      /* WhatsApp Floating Button */
-      .whatsapp-float {
-          position:fixed;
-          bottom:20px;
-          right:20px;
-          height: 26px;
-          background:#25D366;
-          color:white;
-          border-radius:50%;
-          padding:15px;
-          font-size:25px;
-          box-shadow:0 4px 10px rgba(0,0,0,0.3);
-          text-decoration:none;
-          z-index:1000;
-      }
-
-      .paragraph-header{
-          font-weight: bold;
-          margin-top: 20px;
-          font-size: 22px;
-          margin-bottom: 15px;
-      }
-
-      .places-to-visit p{
-          margin-bottom: 15px;
-          margin-top: 5px;
-          font-size: 15px;
-      }
-
-      .services-text h3{
-          color: rgb(0, 255, 233);
-      }
-
-      .services-text p{
-          color: white;
-          font-size: 14px;
-          margin-top: -10px;
-      }
-      /* Responsive Design */
-      @media screen and (max-width: 600px) {
-          .brand-name{
-              font-size: 18px;
-          }
-          .brand-slogan{
-              font-size: 12px;
-          }
-          .brand-slogan-lastline{
-              font-size: 14px;
-          }
-          .navbar a {
-              font-size: 12px;
-          }
-
-          header h1 { font-size:1.3rem; color: aqua; margin:0; margin-bottom: -10px; }
-          header p { font-size:1rem; color: white; }
-
-          .topbar {
-          background:#007bff;
-          color:white;
-          padding:8px 10px;
-          display:flex;
-          justify-content:space-between;
-          align-items: center;
-          font-size:0.7rem;
-          }
-
-          .topbar a { color:white; text-decoration:none; margin-right:0px; font-size: 0.7rem; } 
-
-      }
-  </style>
+  <title>TMN Travels - Best Travel Agency in Delhi NCR</title>
 </head>
 <body>
 
-  <?php include 'header.php'; ?>
+  <!-- 1. Header -->
+  <?php include ROOT_PATH . '/header.php'; ?>
 
-  <!-- nav bar --> 
-  <nav class="navbar" style="background: rgba(0, 0, 0, 0.7); padding: 10px 20px; display: flex; justify-content: center; gap: 20px; position: sticky; top: 0; z-index: 100;">
-    <a href="index.php" style="color: white; text-decoration: none; font-weight: bold;">Home</a>
-    <a href="pages/services.php" style="color: white; text-decoration: none; font-weight: bold;">Services</a>
-    <a href="pages/places/destinations.php" style="color: white; text-decoration: none; font-weight: bold;">Destinations</a>
-    <a href="pages/contactus.php" style="color: white; text-decoration: none; font-weight: bold;">Contact Us</a>
-  </nav>
+  <!-- 2. Responsive Navbar -->
+  <?php include ROOT_PATH . '/navbar.php'; ?>
 
-  <section id="about">
-    <h2 style="margin-top: -30px; font-size: 30px;">Welcome to <?php include 'brand_name.php'; ?></h2>
-    <hr style="margin-top: -16px;">
-    <h2 class="paragraph-header"><u>Services We Offer</u></h2>
-    <div>
-      <ul contextmenu="services" style="list-style-type: square; text-align: left; display: inline-block; margin-top: -10px;">
-        <li>Customized Tour Packages – Family & Company</li>
-        <li>Corporate Travel Solutions – Hotel booking / Meeting / Event</li>
-        <li>Group Off-site / Trip – Companies / Families / etc.</li>
-        <li>All type of Cabs / Luxury Buses booking</li>
-        <li>All type of Flights booking</li>
-      </ul>
-    </div><br><hr>
-
-    <!-- Popular Destinations Section -->
-    <div>
-      <?php include 'pages/popularplaces.php'; ?>
+  <!-- 3. Services Section -->
+  <section class="container" id="services">
+    <div class="section-header">
+      <h2>Services We Offer</h2>
+      <p>Tailored travel solutions for families, groups, and enterprises</p>
     </div>
-    <br><hr>
-    <!-- Why Choose Us Section -->
-  <div>
-    <h2 class="paragraph-header" style="font-size: 22px;"><u>Why Choose Us</u></h2>
-    <h2 style="font-size: 17.5px;">Why We Are the Trusted Travel Agency in Delhi & NCR</h2>
-    <div>
-      <ul contextmenu="reasons" style="list-style-type: square; text-align: left; display: inline-block; margin-top: -10px;">
-        <li>20+ Years of Experience in Corporate Trip Planning</li>
-        <li>Customer Satisfaction is Our Top Priority</li>
-        <li>Competitive Pricing with No Hidden Costs</li>
-        <li>24/7 Customer Support for All Your Travel Needs</li>
-      </ul>
+    <div class="card-grid">
+      <div class="feature-card">
+        <div class="icon-wrap"><i class="fa-solid fa-mountain-sun"></i></div>
+        <h3>Tour Packages</h3>
+        <p>Customized holiday itineraries crafted for families, couples, and friends.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrap"><i class="fa-solid fa-briefcase"></i></div>
+        <h3>Corporate Travel</h3>
+        <p>End-to-end management for meetings, conferences, and executive hotels.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrap"><i class="fa-solid fa-users"></i></div>
+        <h3>Group Off-sites</h3>
+        <p>Fun and productive off-site team excursions and large group getaways.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrap"><i class="fa-solid fa-van-shuttle"></i></div>
+        <h3>Cabs & Buses</h3>
+        <p>Verified AC cabs, tempo travellers, and luxury Volvo buses on rent.</p>
+      </div>
     </div>
-    <br><hr>
-  </div>
   </section>
 
-  <!-- Contact Us Section -->
-  <section id="contact" style="margin-top: -90px;">
-    <h2 class="paragraph-header"><u>Contact Us</u></h2>
-    <div class="contact-form">
-      <form action="https://formsubmit.co/pahalwar@gmail.com" method="POST">
-        <!--<input type="hidden" name="_cc" value="c-enil.facilities@timesgroup.com">-->
-        <!--<input type="hidden" name="_cc" value="another@email.com,yetanother@email.com">-->
-        <!--<input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">-->
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="phone" name="phone" placeholder="Your Phone Number" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <input type="hidden" name="_captcha" value="false">
-        <button type="submit">Send Message</button>
+  <!-- 4. Popular Places Component -->
+  <?php 
+    $popularPlaces = ROOT_PATH . '/pages/popularplaces.php';
+    if (file_exists($popularPlaces)) {
+        echo '<section style="background: #ffffff; padding: 40px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); width: 100%;">';
+        echo '<div class="container" style="padding-top: 0; padding-bottom: 0;">';
+        include $popularPlaces;
+        echo '</div>';
+        echo '</section>';
+    }
+  ?>
+
+  <!-- 5. Why Choose Us Section -->
+  <section class="container">
+    <div class="section-header">
+      <h2>Why Choose Us</h2>
+      <p>Why We Are the Trusted Travel Agency in Delhi & NCR</p>
+    </div>
+    <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+      <div class="feature-card">
+        <div class="icon-wrap"><i class="fa-solid fa-award"></i></div>
+        <h3>20+ Years Experience</h3>
+        <p>Proven excellence in organizing corporate & family trip planning.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrap"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+        <h3>Competitive Pricing</h3>
+        <p>Best rates guaranteed with zero hidden fees or surprise charges.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon-wrap"><i class="fa-solid fa-headset"></i></div>
+        <h3>24/7 Support</h3>
+        <p>Dedicated travel team standing by for all your on-trip requirements.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Contact Us Form -->
+  <section class="container" id="contact" style="padding-top: 10px;">
+    <div class="section-header">
+      <h2>Get In Touch</h2>
+      <p>Send your query and our team will get back to you with custom quotes</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <form action="https://formsubmit.co/pahalwar@gmail.com" method="POST" autocomplete="on">
+        <!-- Anti-Spam Honeypot -->
+        <input type="text" name="_honey" class="antispam-trap" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="form-group">
+          <input type="text" name="name" class="form-control" placeholder="Your Name" maxlength="60" pattern="[a-zA-Z\s]+" title="Only letters and spaces allowed" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number" maxlength="15" pattern="[0-9+-\s]{8,15}" title="Enter a valid phone number" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" class="form-control" rows="4" placeholder="Tell us your destination, dates, and travelers..." maxlength="1000" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
       </form>
     </div>
-    <br><hr>
-
-
-    <!--About US section-->
-        <h2 class="paragraph-header"><u>About US</u></h2>
-    <p style="margin-top: -10px;">At TMN Travels, we are a trusted and experienced travel agency dedicated to planning memorable trips for our valued customers. With over 20 years of expertise, we offer personalized travel solutions, seamless trip planning, and reliable support. Our commitment is to provide hassle-free journeys, competitive pricing, and exceptional service, ensuring every customer enjoys a safe and unforgettable travel experience.</p>
-
   </section>
 
-<!-- footer section-->
-
-  <?php include 'footer.php'; ?>
+  <!-- 7. Footer -->
+  <?php include ROOT_PATH . '/footer.php'; ?>
 
 </body>
 </html>
