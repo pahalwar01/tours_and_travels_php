@@ -1,38 +1,28 @@
 <?php
-// index.php
+// header.php
+if (!defined('SECURE_ACCESS')) {
+    header("HTTP/1.1 403 Forbidden");
+    exit("Direct access forbidden.");
+}
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-</head>
-<body>
+<!-- Top Contact Bar -->
+<div class="site-topbar">
+  <div>
+    <strong><a href="../../index.php"><i class="fa-solid fa-plane-departure" style="color: var(--primary); margin-right: 6px;"></i><?php echo htmlspecialchars(AGENCY_NAME, ENT_QUOTES, 'UTF-8'); ?></a></strong>
+  </div>
+  <div>
+    <a href="tel:<?php echo AGENCY_PHONE; ?>" style="margin-right: 15px;">
+      <i class="fa-solid fa-phone" style="margin-right: 4px;"></i> <?php echo AGENCY_PHONE; ?>
+    </a>
+    <a href="mailto:<?php echo AGENCY_EMAIL; ?>">
+      <i class="fa-solid fa-envelope" style="margin-right: 4px;"></i> <?php echo AGENCY_EMAIL; ?>
+    </a>
+  </div>
+</div>
 
-  <!--header name and contact details-->
-    <div class="topbar">
-        <div><strong><?php include 'brand_name.php'; ?></strong></div>
-            <a>
-                📞 +91 9876543210 | ✉ travelagency@email.com
-            </a>
-    </div>
-  <!--header name and contact details end-->
-
-  <header style="background:url('https://cdn.pixabay.com/photo/2020/03/01/00/55/compass-4891499_1280.jpg')
-                center/cover no-repeat;  
-                height:20vh; 
-                color:white; 
-                text-align:center; 
-                display:flex; 
-                flex-direction:column; 
-                justify-content:center; 
-                position:relative;">
-    <h1 class="brand-name" style="color: rgb(250, 255, 0);"><b><?php include 'brand_name.php'; ?></b></h1>
-    <p class="brand-slogan"><b>"Your Journey, Our Responsibility"</b></p>
-    <p class="brand-slogan-lastline" style="margin-top: -10px;">"Trusted tours and travels company in Delhi & NCR."</p>
-  </header>
-</body>
-</html>
+<!-- Header Hero Banner -->
+<header class="site-header-hero">
+  <h1><?php echo htmlspecialchars(AGENCY_NAME, ENT_QUOTES, 'UTF-8'); ?></h1>
+  <p class="brand-slogan">"Your Journey, Our Responsibility"</p>
+  <p class="brand-subtext">Trusted Tours & Travels Agency in Delhi & NCR</p>
+</header>
