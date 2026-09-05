@@ -1,177 +1,60 @@
+<?php
+// pages/contactus.php
+require_once __DIR__ . '/../config.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
-  <title>Contact Us</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; 
-        background:url('https://images.unsplash.com/photo-1501436513145-30f24e19fcc8?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover fixed no-repeat;
-        color:#333;}
-        /* Top Contact Bar */
-      .topbar {
-          background:#007bff;
-          color:white;
-          padding:8px 20px;
-          display:flex;
-          justify-content:space-between;
-          align-items: center;
-          font-size:13px;
-      }
-      .topbar a { color:white; text-decoration:none; margin-left:0px; } 
-
-      /* Hero Header */
-      header::before {
-          content:"";
-          position:absolute;
-          top:0; left:0; right:0; bottom:0;
-          background:rgba(0,0,0,0.1); /* dark overlay */
-      }
-      header .hero-text {
-          position:relative;
-          z-index:1;
-      }
-      header h1 { font-size:3rem; color: aqua; margin:0; margin-bottom: -10px; }
-      header p { font-size:1.2rem; color: white; }
-
-
-      footer { background:rgba(0,0,0,0.5); 
-              color:white; 
-              padding:10px;
-              text-align:center; 
-              border-radius:10px;}
-
-      /* Sections */
-      section { padding:40px; text-align:center; color: black; }
-      .contact-form { max-width:500px; margin:auto; }
-      input, textarea { width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #ccc; }
-      button { padding:10px 20px; background:#007bff; color:white; border:none; border-radius:5px; cursor:pointer; }
-
-      .social-icons a {
-          color:white;
-          margin:0 10px;
-          font-size:20px;
-          text-decoration:none;
-      }
-
-      .hover:hover {
-          transform: scale(1.25);
-          box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      }
-
-      /* WhatsApp Floating Button */
-      .whatsapp-float {
-          position:fixed;
-          bottom:20px;
-          right:20px;
-          height: 26px;
-          background:#25D366;
-          color:white;
-          border-radius:50%;
-          padding:15px;
-          font-size:25px;
-          box-shadow:0 4px 10px rgba(0,0,0,0.3);
-          text-decoration:none;
-          z-index:1000;
-      }
-
-      .paragraph-header{
-          font-weight: bold;
-          margin-top: 20px;
-          font-size: 22px;
-          margin-bottom: 15px;
-      }
-
-      .places-to-visit p{
-          margin-bottom: 15px;
-          margin-top: 5px;
-          font-size: 15px;
-      }
-
-      .services-text h3{
-          color: rgb(0, 255, 233);
-      }
-
-      .services-text p{
-          color: white;
-          font-size: 14px;
-          margin-top: -10px;
-      }
-      @media screen and (max-width: 600px) {
-          .brand-name{
-              font-size: 18px;
-          }
-          .brand-slogan{
-              font-size: 12px;
-          }
-          .brand-slogan-lastline{
-              font-size: 14px;
-          }
-          .navbar a {
-              font-size: 12px;
-          }
-
-          header h1 { font-size:1.3rem; color: aqua; margin:0; margin-bottom: -10px; }
-          header p { font-size:1rem; color: white; }
-
-          .topbar {
-          background:#007bff;
-          color:white;
-          padding:8px 10px;
-          display:flex;
-          justify-content:space-between;
-          align-items: center;
-          font-size:0.7rem;
-          }
-
-          .topbar a { color:white; text-decoration:none; margin-right:0px; font-size: 0.7rem; } 
-
-      }
-  </style>
+  <title>Contact Us - <?php echo htmlspecialchars(AGENCY_NAME, ENT_QUOTES, 'UTF-8'); ?></title>
 </head>
 <body>
 
-  <!--header name and contact details-->
-    <?php include '../header.php'; ?>
-  <!-- nav bar -->
-  <nav class="navbar" style="background: rgba(0, 0, 0, 0.7); padding: 10px 20px; display: flex; justify-content: center; gap: 20px; position: sticky; top: 0; z-index: 100;">
-    <a href="../index.php" style="color: white; text-decoration: none; font-weight: bold;">Home</a>
-    <a href="services.php" style="color: white; text-decoration: none; font-weight: bold;">Services</a>
-    <a href="../pages/places/destinations.php" style="color: white; text-decoration: none; font-weight: bold;">Destinations</a>
-    <a href="contactus.php" style="color: white; text-decoration: none; font-weight: bold;">Contact Us</a>
-  </nav>
-  <br><br><br>
+  <!-- Header & Navbar -->
+  <?php include ROOT_PATH . '/header.php'; ?>
+  <?php include ROOT_PATH . '/navbar.php'; ?>
 
-    <!-- Contact Us Section -->
-  <section id="contact" style="margin-top: -90px;">
-    <h2 class="paragraph-header"><u>Contact Us</u></h2>
-    <div class="contact-form">
-      <form action="https://formsubmit.co/pahalwar@gmail.com" method="POST">
-        <!--<input type="hidden" name="_cc" value="c-enil.facilities@timesgroup.com">-->
-        <!--<input type="hidden" name="_cc" value="another@email.com,yetanother@email.com">-->
-        <!--<input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">-->
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="phone" name="phone" placeholder="Your Phone Number" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <input type="hidden" name="_captcha" value="false">
-        <button type="submit">Send Message</button>
+  <main class="container">
+    <div class="contact-wrapper">
+      <div class="section-header">
+        <h2>Get In Touch</h2>
+        <p>Send your queries and our travel experts will respond shortly</p>
+      </div>
+
+      <form action="https://formsubmit.co/pahalwar@gmail.com" method="POST" autocomplete="on">
+        <!-- Anti-Spam Honeypot -->
+        <input type="text" name="_honey" class="antispam-trap" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_template" value="table">
+
+        <div class="form-group">
+          <input type="text" name="name" class="form-control" placeholder="Your Full Name" maxlength="60" pattern="[a-zA-Z\s]+" title="Letters and spaces only" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" name="phone" class="form-control" placeholder="Mobile Number" maxlength="15" pattern="[0-9+-\s]{8,15}" title="Enter a valid phone number" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" class="form-control" rows="5" placeholder="Share your destination, dates, and group size..." maxlength="1000" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message</button>
       </form>
     </div>
-    <br><hr>
 
+    <!-- About Section Card -->
+    <div class="place-content" style="margin-top: 35px; text-align: center;">
+      <h3 style="color: var(--dark); margin-bottom: 10px; font-size: 1.3rem;">About <?php echo htmlspecialchars(AGENCY_NAME, ENT_QUOTES, 'UTF-8'); ?></h3>
+      <p style="color: var(--text-muted); font-size: 0.95rem;">
+        With over 20 years of expertise, we offer personalized travel solutions, seamless trip planning, and reliable on-trip support. Our commitment is to provide hassle-free journeys, competitive pricing, and exceptional service across India.
+      </p>
+    </div>
+  </main>
 
+  <!-- Footer -->
+  <?php include ROOT_PATH . '/footer.php'; ?>
 
-    <!--About US section-->
-        <h2 class="paragraph-header"><u>About US</u></h2>
-    <p style="margin-top: -10px;">At TMN Travels, we are a trusted and experienced travel agency dedicated to planning memorable trips for our valued customers. With over 20 years of expertise, we offer personalized travel solutions, seamless trip planning, and reliable support. Our commitment is to provide hassle-free journeys, competitive pricing, and exceptional service, ensuring every customer enjoys a safe and unforgettable travel experience.</p>
-
-  </section>
-
-<!-- footer section-->
-  <?php include '../footer.php'; ?>
-  
 </body>
 </html>
