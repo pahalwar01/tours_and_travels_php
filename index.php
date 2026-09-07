@@ -81,8 +81,8 @@ require_once __DIR__ . '/config.php';
       </div>
       <div class="feature-card">
         <div class="icon-wrap"><i class="fa-solid fa-headset"></i></div>
-        <h3>One Contact Owner</h3>
-        <p>Dedicated travel team standing by for all your on-trip requirements.</p>
+        <h3>One Contact For All Support</h3>
+        <p>Dedicated travel expert standing by for all your on-trip requirements.</p>
       </div>
     </div>
   </section>
