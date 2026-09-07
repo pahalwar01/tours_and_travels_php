@@ -15,11 +15,11 @@ require_once __DIR__ . '/../config.php';
 <body>
 
   <!-- Header & Navbar -->
-  <?php include ROOT_PATH . '/header.php'; ?>
-  <?php include ROOT_PATH . '/navbar.php'; ?>
+  <?php include ROOT_PATH . '../header.php'; ?>
+  <?php include ROOT_PATH . '../navbar.php'; ?>
 
   <main class="container">
-      <?php include ROOT_PATH . '/corporate_desk.php'; ?>
+    <?php include ROOT_PATH . '../corporate_desk.php'; ?>
   </main>
 
   <!-- Footer -->
