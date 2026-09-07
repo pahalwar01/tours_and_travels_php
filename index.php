@@ -71,7 +71,7 @@ require_once __DIR__ . '/config.php';
     <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
       <div class="feature-card">
         <div class="icon-wrap"><i class="fa-solid fa-award"></i></div>
-        <h3>20+ Years Experience in Corporate Travel</h3>
+        <h3>20+ Years Experience in Corporate Event Travel and Offsites</h3>
         <p>Proven excellence in organizing corporate & family trip planning.</p>
       </div>
       <div class="feature-card">
