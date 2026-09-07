@@ -71,7 +71,7 @@ require_once __DIR__ . '/config.php';
     <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
       <div class="feature-card">
         <div class="icon-wrap"><i class="fa-solid fa-award"></i></div>
-        <h3>20+ Years Experience</h3>
+        <h3>20+ Years Experience in Corporate Travel</h3>
         <p>Proven excellence in organizing corporate & family trip planning.</p>
       </div>
       <div class="feature-card">
@@ -81,7 +81,7 @@ require_once __DIR__ . '/config.php';
       </div>
       <div class="feature-card">
         <div class="icon-wrap"><i class="fa-solid fa-headset"></i></div>
-        <h3>24/7 Support</h3>
+        <h3>One Contact Owner</h3>
         <p>Dedicated travel team standing by for all your on-trip requirements.</p>
       </div>
     </div>
@@ -90,7 +90,7 @@ require_once __DIR__ . '/config.php';
   <!-- 6. Contact Us Form -->
 
     <main class="container">
-      <?php include ROOT_PATH . '../corporate_desk.php'; ?>
+      <?php include ROOT_PATH . '/corporate_desk.php'; ?>
     </main>
 
   <!-- 7. Footer -->
