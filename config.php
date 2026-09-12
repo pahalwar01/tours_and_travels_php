@@ -14,9 +14,9 @@ define('SECURE_ACCESS', true);
 // रूट पाथ और ग्लोबल वेरिएबल्स
 define('ROOT_PATH', __DIR__);
 define('AGENCY_NAME', "TMN's Tour & Travels");
-define('AGENCY_PHONE', "+91 98765 43210");
-define('AGENCY_EMAIL', "travelagency@email.com");
-define('WHATSAPP_NUMBER', "917503629170");
+define('AGENCY_PHONE', "+91 9953294943");
+define('AGENCY_EMAIL', "nandannegi07@gmail.com");
+define('WHATSAPP_NUMBER', "919953294943");
 
 // HTTP Security Headers
 header("X-Frame-Options: SAMEORIGIN");
